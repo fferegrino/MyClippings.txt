@@ -49,7 +49,7 @@ export const parseLinesIntoClipping = (entry: string): Clipping | null => {
         const dateString = metadataParts[potentialDateIndex].trim();
         const dateMatch = dateString.match(/Added on (?<weekday>\w+), (?<day>\d+) (?<month>\w+) (?<year>\d{4}) (?<time>\d{2}:\d{2}:\d{2})/);
         if (dateMatch && dateMatch.groups) {
-            const { weekday, day, month, year, time } = dateMatch.groups;
+            const { day, month, year, time } = dateMatch.groups;
             date = new Date(`${month} ${day}, ${year} ${time}`);
         }
         else {

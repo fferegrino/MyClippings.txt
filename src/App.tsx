@@ -33,7 +33,6 @@ function App() {
     const parseMyClippingsTxtFile = (text: string) => {
         const entries = text.split('==========');
         const rawClippings: { [key: string]: Clipping[] } = {};
-        const groupedClippings: { [key: string]: Clipping[] } = {};
 
         entries.forEach((entry) => {
             const clipping = parseLinesIntoClipping(entry);

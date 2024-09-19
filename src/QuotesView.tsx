@@ -2,10 +2,9 @@ import { ScrollArea } from './components/ui/scroll-area';
 import { useState, useRef } from 'react';
 import { Clipping } from './Clipping';
 import { Card, CardContent } from './components/ui/card';
-import { Quote, Calendar, Book, StickyNote } from 'lucide-react';
+import { Quote, Book } from 'lucide-react';
 
 function QuotesView({ clippings, onReset }: { clippings: { [key: string]: Clipping[] }, onReset: () => void }) {
-    const [_clippings, setClippings] = useState<{ [key: string]: Clipping[] }>(clippings);
     const [activeBook, setActiveBook] = useState<string | null>(null)
     const bookRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
 
